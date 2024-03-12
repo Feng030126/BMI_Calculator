@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="107dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="383dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:height="50dp"
+        android:ems="10"
+        android:hint="@string/hint_height"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBMI"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBMI"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBMI" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="383dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="@string/hint_weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextHeight"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/editTextHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeight" />
+
+    <TextView
+        android:id="@+id/textViewBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/bmi"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBMI"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBMI"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBMI" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWeight"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/editTextWeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="@+id/calculateButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/calculateButton"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+
+    <ImageView
+        android:id="@+id/imageViewInfo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/info"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="@+id/calculateButton"
+        app:layout_constraintStart_toStartOf="@+id/calculateButton"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+</androidx.constraintlayout.widget.ConstraintLayout>
